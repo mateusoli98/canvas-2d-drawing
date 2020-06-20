@@ -1,64 +1,62 @@
-
-document.addEventListener("DOMContentLoaded", () => {
-
-
-
-    const brush = {
-        active: false,
-        moviment: false,
-        positionActual: {
-            x: 0,
-            y: 0
-        },
-        positionOld: null
+const canvas2dModel = {
+    name: null,
+    line: {
+        width: 3,
+        color: "black"
     }
+}
 
+const brush = {
+    active: false,
+    moviment: false,
+    positionActual: {
+        x: 0,
+        y: 0
+    },
+    positionOld: null
+}
 
+function createCanvas2d(canvas2dModel) {
 
-    const screen = document.querySelector("#screen");
+    document.addEventListener("DOMContentLoaded", () => {
 
+        const screen = document.getElementById(canvas2dModel.name);
+        const context = screen.getContext("2d");
 
+        screen.width = screen.clientWidth;
+        screen.height = screen.clientHeight;
 
+        context.lineWidth = canvas2dModel.line ? canvas2dModel.line.width : 3;
+        context.strokeStyle = canvas2dModel.line ? canvas2dModel.line.color : "black";
 
-    const context = screen.getContext("2d");
-
-    screen.width = 500;
-    screen.height = 500;
-
-    context.lineWidth = 3;
-    context.strokeStyle = "red";
-
-
-
-    const drawingLine = (line) => {
-        context.beginPath();
-        context.moveTo(line.positionOld.x, line.positionOld.y);
-        context.lineTo(line.positionActual.x, line.positionActual.y);
-        context.stroke();
-    }
-
-
-
-    screen.onmousedown = (event) => { brush.active = true };
-    screen.onmouseup = (event) => { brush.active = false };
-
-    screen.onmousemove = (event) => {
-        brush.positionActual.x = event.clientX;
-        brush.positionActual.y = event.clientY;
-        brush.moviment = true;
-    };
-
-
-    const run = () => {
-        if (brush.active && brush.moviment && brush.positionOld) {
-            drawingLine({ positionActual: brush.positionActual, positionOld: brush.positionOld });
-            brush.moviment = false;
+        const drawingLine = (line) => {
+            context.beginPath();
+            context.moveTo(line.positionOld.x, line.positionOld.y);
+            context.lineTo(line.positionActual.x, line.positionActual.y);
+            context.stroke();
         }
-        brush.positionOld = { ...brush.positionActual };
 
-        setTimeout(run, 10);
-    };
+        document.onmousedown = () => { brush.active = true };
+        document.onmouseup = () => { brush.active = false }
 
-    run();
+        screen.onmousemove = (event) => {
+            brush.positionActual.x = event.clientX;
+            brush.positionActual.y = event.clientY;
+            brush.moviment = true;
+        };
 
-});
+        const run = () => {
+            if (brush.active && brush.moviment && brush.positionOld) {
+                drawingLine({ positionActual: brush.positionActual, positionOld: brush.positionOld });
+                brush.moviment = false;
+            }
+
+            brush.positionOld = { ...brush.positionActual };
+            setTimeout(run, 10);
+        };
+
+        run();
+    });
+}
+
+module.exports = { createCanvas2d };
