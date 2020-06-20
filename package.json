@@ -1,12 +1,26 @@
 {
   "name": "canvas-2d-drawing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Biblioteca para criação de desenhos em forma de linha em seu browser",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mateusoli98/canvas-2d-drawing"
+  },
+  "keywords": [
+    "drawing",
+    "drawing 2d",
+    "2d",
+    "canvas",
+    "canvas 2d",
+    "JavaScript 2d",
+    "Browser",
+    "Desenho",
+    "Desenho 2d"
+  ],
+  "author": "Mateus Oliveira",
   "license": "ISC"
 }
