@@ -1,11 +1,3 @@
-const canvas2dModel = {
-    name: null,
-    line: {
-        width: 3,
-        color: "black"
-    }
-}
-
 const brush = {
     active: false,
     moviment: false,
@@ -20,7 +12,7 @@ function createCanvas2d(canvas2dModel) {
 
     document.addEventListener("DOMContentLoaded", () => {
 
-        const screen = document.getElementById(canvas2dModel.name);
+        const screen = document.getElementById(canvas2dModel.id);
         const context = screen.getContext("2d");
 
         screen.width = screen.clientWidth;
