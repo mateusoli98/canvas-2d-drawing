@@ -8,7 +8,7 @@ const brush = {
     positionOld: null
 }
 
-function createCanvas2d(canvas2dModel) {
+function Canvas2dDrawing(canvas2dModel) {
 
     document.addEventListener("DOMContentLoaded", () => {
 
@@ -51,4 +51,4 @@ function createCanvas2d(canvas2dModel) {
     });
 }
 
-module.exports = { createCanvas2d };
+module.exports = { Canvas2dDrawing };
