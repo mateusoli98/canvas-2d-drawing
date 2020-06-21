@@ -63,15 +63,15 @@ Ps: as cores também podem ser em hexadecimal, RGB ou RGBA, exemplo:
 
 2. RGBA
 
-  ```js
-    canvas2dDrawing({
+```js
+canvas2dDrawing({
         ...
         line: {
             ...
             color: "rgba(0,0,0,0.5)"
         }
     });
-    ```
+```
 
 - Curiosidade:
     Ao clicar com o botão direito do mouse no canvas você poderá salvar ou copiar o desenho que criou em formato de imagem.
