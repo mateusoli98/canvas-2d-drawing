@@ -1,12 +1,7 @@
 ### Canvas 2D drawing
 
-> Está bliblioteca irá permitir que você possa criar desenhos em forma de linha direto do seu browser
+> Está projeto irá permitir que você possa criar desenhos em forma de linha direto do seu browser
 
-- Instalação
-
-```shell
-npm i 2d-drawing
-```
 
 - Como utilizar ?
     
@@ -19,10 +14,10 @@ npm i 2d-drawing
     Para iniciar o seu _Canvas 2d Drawing_ ultilize a função _canvas2dDrawing_ passando um objeto contendo o id do seu canvas:
 
     ```html
-    <script src="canvas-2d-drawing"></script>
+    <script src="./canvas-2d-drawing"></script>
     <script>
         canvas2dDrawing({
-            id: "teste"
+            id: "nameCanvas"
         });
     </script>
     ```
@@ -78,3 +73,5 @@ Ps: as cores também podem ser em hexadecimal, RGB ou RGBA, exemplo:
     });
     ```
 
+- Curiosidade:
+    Ao clicar com o botão direito do mouse no canvas você poderá salvar ou copiar o desenho que criou em formato de imagem.
