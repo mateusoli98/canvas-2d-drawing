@@ -16,18 +16,15 @@ npm i canvas-2d-drawing
     <canvas id="nameCanvas" style="width: 500px; height: 500px;"></canvas>
     ```
 
-    Em seu arquivo JavaScript importe a função
-
-    ```js
-    const { canvas2dDrawing } = require("canvas-2d-drawing");
-    ```
-
     Para iniciar o seu _Canvas 2d Drawing_ ultilize a função _canvas2dDrawing_ passando um objeto contendo o id do seu canvas:
 
-    ```js
-    canvas2dDrawing({
-        id: "nameCanvas"
-    });
+    ```html
+    <script src="canvas-2d-drawing"></script>
+    <script>
+        canvas2dDrawing({
+            id: "teste"
+        });
+    </script>
     ```
 
     >Desta forma o seu canvas está pronto.
