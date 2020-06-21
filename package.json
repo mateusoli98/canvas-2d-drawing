@@ -1,5 +1,5 @@
 {
-  "name": "canvas-2d-drawing",
+  "name": "2d-drawing",
   "version": "1.0.0",
   "description": "Biblioteca para criação de desenhos em forma de linha em seu browser",
   "main": "./lib/index.js",
