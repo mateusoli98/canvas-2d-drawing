@@ -5,7 +5,7 @@
 - Instalação
 
 ```shell
-npm i canvas-2d-drawing
+npm i 2d-drawing
 ```
 
 - Como utilizar ?
